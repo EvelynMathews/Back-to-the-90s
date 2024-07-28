@@ -1,0 +1,1417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  /* Lo uso para la animación suave de desplazamiento */
+}
+
+body {
+  justify-content: center;
+  margin: 0;
+  opacity: 1;
+  /* Establecer la opacidad inicial */
+  transition: opacity 0.5s ease-in-out;
+  /* Definir la transición de opacidad */
+
+}
+
+body.ocultar {
+  opacity: 0;
+  /* Reducir la opacidad al 0 para ocultar el contenido */
+}
+
+/* Header */
+
+/* Titulos */
+h1 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Press Start 2P", system-ui;
+  font-size: medium;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Press Start 2P", system-ui;
+  font-size: medium;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  padding-bottom: 1vh;
+  padding-right: 2vw;
+  background-color: #0F0E0C;
+  height: 64px;
+  width: 100vw;
+  padding-top: 1vw;
+  align-content: center;
+
+}
+
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.pagina-actual {
+  font-weight: bold;
+}
+
+.logo {
+  float: left;
+  padding-left: 3%;
+  margin-right: 10px;
+  width: 15%;
+  height: 60%;
+}
+
+.logo-chico {
+  height: 100%;
+  max-width: 100%;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+li a {
+  padding: 10px;
+  color: #FFCB02;
+  text-decoration: none;
+}
+
+/* Imagen */
+img {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: block;
+  /* Para que la imagen se comporte como un bloque y ocupe todo el ancho del header */
+}
+
+
+
+main {
+  background-color: #A7B3F9;
+  width: 100vw;
+}
+
+.tituloH1 {
+  padding-bottom: 2%;
+  padding-top: 3%;
+}
+
+
+.primeraSeccion {
+  width: 100vw;
+  font-size: 0;
+  /* Elimina el espacio entre elementos inline-block */
+  background-color: #A7B3F9;
+  padding-bottom: 7vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  text-align: justify;
+}
+
+.primeraSeccion div {
+  width: 29vw;
+  display: inline-block;
+  margin: 0 1%;
+  /* Añade margen entre las columnas */
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.bloqueTextoSeccionPrimera {
+  width: 85%;
+}
+
+.bloqueTextoSeccionPrimera h2 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+/* Estilos exclusivos de la HOME */
+.seccion-home p {
+  padding: 0% 10% 2% 10%;
+  font-size: larger;
+  text-align: center;
+}
+
+/* Sección parallax */
+.parallax-container {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  padding: 4% 0%;
+}
+
+.parallax {
+  background-image: url('../img/home/home-parallax.webp');
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.8);
+}
+
+/* Seccion Video */
+.video-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 2% 0% 5% 0%;
+
+}
+
+.video-section iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Texto en video */
+
+.video-section {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text-overlay {
+  transform: translateY(-10%);
+  text-align: center;
+  color: #FFCB02;
+  ;
+  padding: 20px;
+  font-size: 200px;
+  background-color: black;
+  width: 100vw;
+  height: 10vh;
+}
+
+.text-overlay h2 {
+  font-size: x-large;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Botón Comprar */
+
+.comprar-entradas {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.comprar-entradas span {
+  width: 100%;
+  margin-top: 5px;
+
+}
+
+.comprar-entradas a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-comprar {
+  background-color: #FFCB02;
+  color: #0F0E0C;
+  font-size: x-large;
+  font-family: "Press Start 2P", system-ui;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+.btn-comprar:hover {
+  background-color: #FFA500;
+  transform: scale(1.05);
+}
+
+
+/* patrocinadores */
+.patrocinadores {
+  background-color: black;
+  color: #FFCB02;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.titulo-patrocinadores {
+  padding-bottom: 2%;
+}
+
+.imagenes-patrocinadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imagenes-patrocinadores img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.sponsor-img {
+  filter: grayscale(100%);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------- */
+
+
+/* Estilos exclusivos de la seccion CONOCENOS */
+
+.seccionConocenos {
+  width: 100vw;
+  font-size: 0;
+  /* Para quitar el espacio entre elementos inline-block */
+  background-color: #A7B3F9;
+  padding-bottom: 7vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  text-align: justify;
+}
+
+.seccionConocenos p {
+  font-size: larger;
+}
+
+.seccionConocenos div {
+  width: 29vw;
+  /* Para el ancho de cada columna */
+  display: inline-block;
+  /* Lo use para mostrar el elemento en linea y tambien para ajustar el ancho, porque mis divs se muestran en linea con otros elementos */
+  margin: 0 1%;
+  /* Añade margen entre las columnas */
+  vertical-align: top;
+  /* Para alinear los elementos en la parte superior */
+  font-size: 14px;
+}
+
+.seccion-imagen-fija {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.seccion-imagen-fija h3 {
+  font-size: larger;
+  padding: 2% 0% 2% 0%;
+}
+
+.imagen-fija {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.seccion-imagen-fija:hover .imagen-fija {
+  filter: grayscale(0%);
+}
+
+/* ---------------------------- */
+
+
+/* Estilos de la Seccion GALERIA  */
+
+.seccionFotos {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  /* Añade espacio entre los elementos */
+  background-image: url('../IMG/Backgrounds-Banner/background-section-2.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 45vw;
+  padding-bottom: 3%;
+}
+
+.tituloSeccionGaleria {
+  align-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 33%;
+  background-color: #0F0E0C;
+  border-top: 3px dashed #FFCB02;
+  border-bottom: 3px dashed #FFCB02;
+  color: #FFCB02;
+}
+
+.seccionFotos h2 {
+  grid-column: 1;
+  /* Para poder colocar el título en la primera columna */
+
+}
+
+.contenedor-imagenes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 19px;
+  margin: 0 auto;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+
+
+.contenedor-imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3%;
+
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3%;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.overlay img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  filter: brightness(5);
+}
+
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+  border-radius: 5%;
+}
+
+.image-wrapper:hover img {
+  filter: brightness(50%);
+}
+
+.image-wrapper:hover .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  /* Para hacer el overlay más claro cuando uno pasa el mouse */
+
+  opacity: 1;
+}
+
+.image-wrapper:hover .overlay img {
+  filter: brightness(3);
+  /* Para que mi ícono se mantenga brillante */
+}
+
+
+
+/* Sección - Seguinos en Instagram - Galeria */
+
+.seguinos-instragram {
+  background-color: #A7B3F9;
+  width: 100vw;
+  height: fit-content;
+  padding: 0% 10% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.etiquetanos {
+  padding-bottom: 3%;
+}
+
+.seguinos-instragram p {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.seguinos-instragram a {
+  color: #1d1a1a;
+  font-weight: bolder;
+}
+
+.imagenes-ig {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 5%;
+}
+
+.imagen-ig img {
+  height: auto;
+  max-width: 230px;
+  opacity: 0.8;
+  /* Imagen por defecto con opacidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  /* Para hacer más suave la transición */
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 11%;
+  border-bottom-right-radius: 11%;
+
+}
+
+
+.imagen-ig img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  /* Para que al pasar el mouse la imagen se vea 100% clara. */
+
+}
+
+
+.tituloSeccionInstagram {
+  margin-bottom: 3%;
+  width: 100vw;
+  align-content: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  height: 33%;
+  background-color: #0F0E0C;
+  color: #FFCB02;
+}
+
+.info-sorteo {
+  padding-bottom: 3%;
+}
+
+.info-sorteo ul {
+  float: none;
+  padding-bottom: 4%;
+}
+
+.info-sorteo ul li {
+  padding-right: 8%;
+}
+
+
+.info-sorteo a {
+  color: #FFCB02;
+}
+
+/* ---------------------------- */
+
+
+
+/* Estilos de la sección Festival-Eventos */
+
+/* Estilos del título del calendario */
+.tituloCalendarioEventos {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+}
+
+.tituloCalendarioEventos h1 {
+  margin: 0;
+  color: #1d1a1a;
+  font-size: x-large;
+}
+
+/* Estilos de la sección de las dos cards con los eventos */
+.seccionEventos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2% 4%;
+  background-color: #A7B3F9;
+}
+
+/* Estilos de cada evento */
+.evento {
+  width: 45%;
+  position: relative;
+  text-align: center;
+}
+
+.evento-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.evento-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s;
+  opacity: 0.9;
+}
+
+.evento-img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.evento-img:hover img {
+  opacity: 1;
+}
+
+.evento-img:hover .overlay {
+  opacity: 1;
+}
+
+.evento-info {
+  margin-top: 10px;
+}
+
+.evento-info h3 {
+  margin: 10px 0;
+}
+
+.evento-info p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: larger;
+}
+
+.overlay .text {
+  font-family: "Press Start 2P", system-ui;
+  font-size: medium;
+  color: #FFCB02;
+}
+
+.overlay a {
+  text-decoration: none;
+}
+
+/* Seccion Line Up */
+
+.tituloSeccion3 {
+  height: 80px;
+  background-color: #0F0E0C;
+  color: #FFCB02;
+  padding-top: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.tituloSeccion3 h2 {
+  margin: 0;
+}
+
+.terceraSeccion {
+  align-content: center;
+  grid-template-columns: repeat(4, 19%);
+  grid-gap: 50px;
+  background-image: url(../IMG/Backgrounds-Banner/background-seccion-3.webp);
+  background-color: #A7B3F9;
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6%;
+  padding-right: 4%;
+  padding-bottom: 5%;
+  padding-left: 4%;
+  width: 100%;
+  height: 100%;
+}
+
+
+.textoEnColumna {
+  display: inline-block;
+  /* Lo use para mostrar el elemento en linea y tambien para ajustar el ancho, porque mis divs se muestran en linea con otros elementos */
+  align-content: center;
+  margin: 0 1%;
+  /* Para añadirmargen entre las columnas */
+  vertical-align: top;
+  text-align: justify;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+}
+
+.textoEnColumna h3 {
+  margin-bottom: 5%;
+}
+
+.terceraSeccion .containerTextoImagen {
+  height: 100%;
+  width: 18vw;
+  margin-bottom: 15px;
+  margin: 5px;
+  background-color: #0F0E0C;
+  color: #FFCB02;
+  border-radius: 2%;
+}
+
+.containerTextoImagen {
+  display: inline;
+  padding-right: 5%;
+  padding-left: 5%;
+  border: 3px dashed #FFCB02;
+}
+
+.containerTextoImagen:hover {
+  transform: scale(1.05);
+  /*Para que cada "card" se vea más grande al pasar el mouse*/
+}
+
+.containerTextoImagen img {
+  height: 53vh;
+  width: 16vw;
+  object-fit: cover;
+  /* Lo use nuevamente para que la imagen e ajuste a su contenedor */
+  padding: 3%;
+
+}
+
+
+
+/* Sección Preventa de Entradas */
+
+.seccionEntradas {
+  margin-top: 1%;
+  background-color: #A7B3F9;
+  padding: 20px;
+}
+
+
+.contenido-grilla {
+  display: grid;
+  height: 92vh;
+  /* Pongo el contenido en grillas */
+  grid-template-columns: 1fr 1fr;
+  margin-left: 3%;
+  /* Dos columnas iguales */
+  grid-gap: 5%;
+  /* Espacio entre las columnas */
+  padding-right: 3%;
+  padding-left: 6%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+
+}
+
+.texto {
+  background-color: #A7B3F9;
+}
+
+.texto h2 {
+  float: left;
+}
+
+
+.entradas {
+  margin-top: 10%;
+}
+
+.entradas h2 {
+  font-size: larger;
+
+}
+
+
+/* Form */
+
+.formulario {
+  margin-left: 10%;
+  height: fit-content;
+  width: 80%;
+  padding: 8%;
+  border-radius: 2%;
+  background-color: #1d1a1a;
+  color: #FFCB02;
+  align-content: center;
+  font-family: "Press Start 2P", system-ui;
+
+}
+
+.formulario form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+}
+
+.titulo-formulario {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #FFCB02;
+  color: #0F0E0C;
+  font-weight: bold;
+  font-family: "Press Start 2P", system-ui;
+  font-size: smaller;
+}
+
+button:hover {
+  transform: scale(1.05);
+  /*Para que el botón se vea más grande al pasar el mouse*/
+}
+
+.texto ul {
+  width: 100%;
+  padding-left: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.lista-vertical {
+  float: left;
+  width: 50%;
+}
+
+.lista-vertical li {
+  width: 100%;
+  margin-bottom: 7%;
+  display: block;
+}
+
+.lista-vertical li span.ventas {
+  font-size: 18px;
+}
+
+
+.precio {
+  float: right;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* ---------------------------- */
+
+
+/* Reseñas */
+
+.seccion-resenas {
+  align-content: center;
+  padding-top: 2%;
+  height: 55vh;
+  background-color: #6F7DEC;
+  width: 100vw;
+  text-align: left;
+}
+
+.seccion-resenas h2 {
+  transform: translateY(-25%);
+  font-size: larger;
+}
+
+
+.contenido-grilla-seccion-5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  transform: translateY(-25%);
+}
+
+.barraVintageNavegacion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  /* Ajusta la altura según el diseño */
+  background-color: #FFCB02;
+  margin-bottom: 20px;
+}
+
+.barraVintageNavegacion::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  /* Posición del primer círculo */
+  top: 5px;
+  /* Para editar la posición verticalmente */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d14b4b;
+}
+
+.barraVintageNavegacion::after {
+  content: '';
+  position: absolute;
+  left: 30px;
+  /* Posición del segundo círculo */
+  top: 5px;
+  /* Para ajustar verticalmente */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #6F7DEC;
+}
+
+.bloque-resena {
+  position: relative;
+  border-radius: 3%;
+  width: 22vw;
+  height: 30vh;
+  padding: 8%;
+  background-color: white;
+
+}
+
+.info-resena {
+  transform: translateY(20%);
+}
+
+
+.info-resena h4 {
+  margin-bottom: 3%;
+}
+
+.info-resena p {
+  margin-bottom: 0;
+}
+
+
+/* Seccion saludo "Esperamos Verte" - Conocenos */
+
+
+.seccion-saludo {
+  align-content: center;
+  padding-top: 2%;
+  height: 20vh;
+  background-color: #6F7DEC;
+  width: 100vw;
+  text-align: left;
+}
+
+.seccion-saludo h2 {
+  transform: translateY(-25%);
+  font-size: larger;
+}
+
+.bloqueImagenSeccionConocenos {
+  width: 100%;
+}
+
+
+
+/* Estilos de la sección COMUNIDAD */
+.mainGradiente {
+  background: linear-gradient(#7e8ff1, rgb(252, 185, 196));
+  width: 100vw;
+}
+
+.seccionComunidad {
+  text-align: center;
+  padding: 20px;
+}
+
+.tituloH1Comunidad {
+  margin-bottom: 20px;
+}
+
+.contenidoComunidad {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contenidoComunidad p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contenidoComunidad h2 {
+  margin-top: 5%;
+  font-size: 24px;
+}
+
+.contenidoComunidad ul {
+  list-style-type: disc;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  float: none;
+  padding-top: 3%;
+  padding-left: 1%;
+}
+
+.contenidoComunidad ul li {
+  list-style: disc outside none;
+  display: list-item;
+  margin-left: 10px;
+  padding-bottom: 2%;
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+
+
+.image-section {
+  width: 100vw;
+  overflow: hidden;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.comunidad-image {
+  padding-left: 15%;
+  width: 86%;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(50%);
+}
+
+.image-container:hover .comunidad-image {
+  transform: scale(1.1);
+  filter: saturate(80%);
+}
+
+.entradas {
+  text-align: center;
+  padding: 0% 5% 7% 5%;
+}
+
+
+.newsletterDivTitulo {
+  height: 11vh;
+  background-color: #dfbbff7d;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+
+/* Formulario */
+
+.formulario-newsletter {
+  margin-left: 10%;
+  width: 80%;
+  padding: 8%;
+  border-radius: 1%;
+  background-color: #2c5cff52;
+  color: #0b0a0a;
+  align-content: center;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.formulario-newsletter form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  padding-bottom: 4%;
+}
+
+.formulario-newsletter form button {
+  background-color: rgb(217 179 233);
+  color: #0F0E0C;
+  font-weight: bold;
+  font-family: "Press Start 2P", system-ui;
+  font-size: smaller;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.formulario-newsletter form label {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.formulario-newsletter form input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #eeddff;
+}
+
+/* ---------------------------- */
+
+
+/* Estilos de Sección CONTACTO */
+
+
+.contacto-background {
+  background-image: url(../img/Contacto/fondo-textura-papel-kraft-negro.webp);
+
+}
+
+.container-contacto {
+  padding-bottom: 2%;
+}
+
+.container-contacto .column {
+  flex-direction: row;
+  flex: 1;
+}
+
+.seccionContacto {
+  text-align: center;
+  padding: 2% 0% 3% 0%;
+}
+
+.seccionContacto h1 {
+  color: #FFCB02;
+  margin-bottom: 20px;
+}
+
+.seccionMails {
+  text-align: center;
+  padding: 20px;
+}
+
+.contenedorBotones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0% 3% 0%;
+  gap: 2%;
+}
+
+.contenedorBotones a {
+  padding: 1%;
+  width: 240px;
+  height: 60px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.contenedorBoton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6%;
+}
+
+.contenedorBoton p {
+  font-size: smaller;
+  line-height: 1.5;
+  /* Me sirve para ajustar el line-height y que los <p> no queden pegados */
+}
+
+.contenedorBoton a {
+  font-family: "Press Start 2P", system-ui;
+}
+
+.p-sponsorship {
+  text-align: center;
+  color: #A7B3F9;
+}
+
+.p-comunicacion {
+  text-align: center;
+  color: #FFCB02;
+}
+
+.p-accesibilidad {
+  text-align: center;
+  color: cyan;
+}
+
+.p-otros {
+  text-align: center;
+  color: #fa3cc4;
+}
+
+
+.boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Me centra horizontalmente el contenido */
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+.boton span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.boton.sponsorship {
+  background-color: #A7B3F9;
+  color: #000;
+}
+
+.boton.comunicacion {
+  background-color: #FFCB02;
+  color: #000;
+}
+
+.boton.accesibilidad {
+  background-color: cyan;
+  color: #000;
+}
+
+.boton.otros {
+  background-color: #fa3cc4;
+  color: #000;
+}
+
+
+.boton.sponsorship:hover {
+  background-color: transparent;
+  border: 1px solid #A7B3F9;
+  color: #A7B3F9;
+}
+
+.boton.comunicacion:hover {
+  background-color: transparent;
+  border: 1px solid #FFCB02;
+  color: #FFCB02;
+}
+
+.boton.accesibilidad:hover {
+  background-color: transparent;
+  border: 1px solid cyan;
+  color: cyan;
+}
+
+
+.boton.otros:hover {
+  background-color: transparent;
+  border: 1px solid #fa3cc4;
+  color: #fa3cc4;
+}
+
+
+/* FORM- Contacto */
+.seccionFormularioContacto {
+  width: 40%;
+}
+
+.formulario-contacto {
+  display: none;
+  height: fit-content;
+  width: 100%;
+  padding: 4%;
+  border-radius: 2%;
+  background-color: transparent;
+  color: #FFCB02;
+  align-content: center;
+  font-family: "Press Start 2P", system-ui;
+  justify-content: center;
+
+}
+
+.formulario-contacto:target {
+  display: block;
+}
+
+
+.formulario-contacto form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 22px;
+}
+
+.titulo-formulario-contacto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------- */
+
+
+/*Footer */
+
+footer {
+  background-color: #0F0E0C;
+  color: #FFCB02;
+  width: 100vw;
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  position: relative;
+  padding-top: 3%;
+}
+
+footer .informacion p a {
+  color: #FFCB02;
+}
+
+.foto,
+.informacion,
+.redes-sociales {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.foto {
+  transform: translateY(-8%);
+}
+
+/* Foto Personal*/
+.foto-alumno {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  /* Para hacer la imagen circular */
+  overflow: hidden;
+  /* Para poder ocultar las esquinas de la imagen */
+}
+
+.footer .foto,
+.footer .informacion {
+  display: inline-block;
+  vertical-align: top;
+  /* Alinear al principio */
+}
+
+.informacion {
+  position: relative;
+  /* Para poder mover la información a una diferente posición dentro de su contenedor */
+  top: 8%;
+  padding-top: 1%;
+}
+
+.informacion p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.informacion h5 {
+  margin-top: 15px;
+}
+
+.redes-sociales {
+  transform: translateY(50%);
+  float: right;
+  padding-right: 4%;
+}
+
+.redes-sociales img {
+  width: 60px;
+}
+
+.redes-sociales a {
+  padding-right: 10%;
+  float: right;
+}
